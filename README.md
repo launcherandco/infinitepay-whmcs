@@ -50,6 +50,6 @@ Este módulo utiliza o recurso de `webhook_url` dinâmico da API. A cada cobran�
 
 > **TENHA SEU WHMCS VERIFICADO**
 >
-> Garanta mais credibilidade e segurança para o seu sistema por apenas **R$ 240,00 anuais**.
+> Garanta mais credibilidade e segurança para o seu sistema por apenas **R$ 250,00 anuais**.
 >
 > [**👉 CLIQUE AQUI PARA CONTRATAR AGORA**](https://licencas.digital/store/whmcs/whmcs-verificado)
