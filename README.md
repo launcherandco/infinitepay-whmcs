@@ -46,6 +46,15 @@ Este módulo utiliza o recurso de `webhook_url` dinâmico da API. A cada cobran�
 
 ---
 
+## 📄 Licença e Suporte
+
+* **Desenvolvido por**: HubApp / Launcher & Co.
+* **Suporte**: [licencas.digital](https://licencas.digital)
+
+Para suporte ou dúvidas sobre a integração, acesse nosso site oficial.
+
+---
+
 ## 💎 Recomendado para seu WHMCS
 
 > **TENHA SEU WHMCS VERIFICADO**
