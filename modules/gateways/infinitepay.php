@@ -114,7 +114,7 @@ function infinitepay_link($params)
 
     // 4. Envio para API
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://api.infinitepay.io/invoices/public/checkout/links");
+    curl_setopt($ch, CURLOPT_URL, "https://api.checkout.infinitepay.io/links");
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

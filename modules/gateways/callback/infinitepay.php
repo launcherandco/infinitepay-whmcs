@@ -41,7 +41,7 @@ checkCbTransID($transactionId);
 // ---------------------------------------------------------
 // SEGURANÇA: Conferência Dupla (Payment Check)
 // A documentação recomenda verificar o status via API para garantir.
-// Endpoint: POST https://api.infinitepay.io/invoices/public/checkout/payment_check
+// Endpoint: POST https://api.checkout.infinitepay.io/payment_check
 // ---------------------------------------------------------
 
 $checkPayload = array(
@@ -52,7 +52,7 @@ $checkPayload = array(
 );
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://api.infinitepay.io/invoices/public/checkout/payment_check");
+curl_setopt($ch, CURLOPT_URL, "https://api.checkout.infinitepay.io/payment_check");
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($checkPayload));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
