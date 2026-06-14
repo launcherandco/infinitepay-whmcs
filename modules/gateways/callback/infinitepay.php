@@ -67,9 +67,17 @@ $checkData = json_decode($response);
 // Verifica se a API confirmou que está "paid": true
 if (isset($checkData->paid) && $checkData->paid === true) {
     
-    // Valor pago em reais (a API devolve em centavos no paid_amount? 
-    // A doc diz "paid_amount": 1510 para R$ 15,10. Então dividimos por 100)
+    // Valor pago no gateway (incluindo taxas e juros repassados)
     $paidAmount = $checkData->paid_amount / 100;
+
+    // Busca o total original da fatura no banco de dados do WHMCS
+    $invoiceData = WHMCS\Database\Capsule::table('tblinvoices')->where('id', $invoiceId)->first();
+    
+    // Se a fatura existir e o valor pago for maior que o total da fatura (juros do cartão),
+    // nós limitamos o valor da baixa ao total exato da fatura para evitar geração de crédito.
+    if ($invoiceData && $paidAmount > $invoiceData->total) {
+        $paidAmount = $invoiceData->total;
+    }
 
     // Aplica o Pagamento no WHMCS
     addInvoicePayment(
