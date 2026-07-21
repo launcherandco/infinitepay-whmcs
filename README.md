@@ -48,7 +48,7 @@ Este módulo utiliza o recurso de `webhook_url` dinâmico da API. A cada cobran�
 
 ## 📄 Licença e Suporte
 
-* **Desenvolvido por**: HubApp / Launcher & Co.
+* **Desenvolvido por**: HubApp / Launcher Tecnologia.
 * **Suporte**: [licencas.digital](https://licencas.digital)
 
 Para suporte ou dúvidas sobre a integração, acesse nosso site oficial.
